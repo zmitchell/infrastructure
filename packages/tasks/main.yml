@@ -1,2 +1,7 @@
 ---
 # tasks file for packages
+- name: Install system packages
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ system_packages }}"
